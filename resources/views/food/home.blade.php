@@ -27,7 +27,7 @@ if (session('cart') == null) {
                 <a href="../home/Western" class="sort-font">Western</a>
             </div>
             <div class="py-1 px-3 border-solid border-1 border-slate-300 rounded-xl text-center bg-white">
-                <a href="../home/Chinese" class="sort-font">Chinese</a>
+                <a href="../home/Local Cuisine" class="sort-font">Local Cuisine</a>
             </div>
             <div class="py-1 px-3 border-solid border-1 border-slate-300 rounded-xl text-center bg-white">
                 <a href="../home/Japanese" class="sort-font">Japanese</a>

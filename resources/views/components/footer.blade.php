@@ -6,11 +6,8 @@
                     <h2 class="text-xl font-bold">Foodie</h2>
 
                     <div class="flex flex-row">
-                        <button class="mr-3 hover:text-blue-700">Store Locations</button>
-                        <span class="text-center text-gray-700">&#8226;</span>
-                        <button class="mx-3 hover:text-blue-700">About Us</button>
-                        <span class="text-center text-gray-700">&#8226;</span>
-                        <button class="ml-3 hover:text-blue-700">Contact Us</button>
+                        <a href="{{ url('/about') }}" class="mx-3 hover:text-blue-700">About Us</a>
+                        <a href="{{ url('/contact') }}" class="ml-3 hover:text-blue-700">Contact Us</a>
                     </div>
 
                     <table>
@@ -32,7 +29,7 @@
                                     </svg>
                                 </td>
                                 <td class="text-left">
-                                    <span class="text-sm pl-2">+603-2276 1254</span>
+                                    <span class="text-sm pl-2">+60-11 2123 0528</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -41,7 +38,7 @@
 
                 <div class="relative flex-1">
                     <div class="absolute right-0 bottom-0">
-                        <h1 class="text-sm text-right">@ 2022 Foodie Sdn. Bhd.</h1>
+                        <h1 class="text-sm text-right">@ 2025 Foodie Sdn. Bhd.</h1>
                         
                         <div class="row my-1">
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,9 +52,9 @@
                         </div>
             
                         <div class="text-right text-sm">             
-                            <button class="hover:text-blue-700">Terms of Service</button>
+                            <a href="{{ url('/terms') }}" class="hover:text-blue-700">Terms of Service</a>
                             <span class="mx-1 text-gray-700">&#8226;</span>
-                            <button class="hover:text-blue-700">Privacy Policy</button>
+                            <a href="{{ url('/privacy') }}" class="hover:text-blue-700">Privacy Policy</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +73,7 @@
                 </div>
                 <span class="grow-0 text-center text-gray-600">&#8226;</span>
                 <div class="pl-4 flex-1 place-self-center text-left">
-                    <button class="hover:text-blue-700">About Us</button>
+                    <a href="{{ url('/about') }}" class="mx-3 hover:text-blue-700">About Us</a>
                 </div>
             </div>
             <table class="mx-auto">

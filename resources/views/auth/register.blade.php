@@ -52,7 +52,11 @@
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
+                                    @if ($message === 'The password format is invalid.')
+                                        <strong>Password must be at least 8 characters.</strong>
+                                    @else
+                                        <strong>{{ $message }}</strong>
+                                    @endif
                                 </span>
                                 @enderror
                             </div>

@@ -12,27 +12,38 @@ use Illuminate\Validation\Rule;
 class UserController extends Controller
 {
     public function update(Request $user)
-    {
+{
+    $id = Auth::id();
 
-        $id = Auth::id();
-        $user->validate([
-            'email' => [
-                'required',
-                Rule::unique('users')->ignore($id),
-            ],
-            'name' => 'required',
-            'address' => 'required',
-        ]);
+    // We will modify the validation rules inside this block
+    $user->validate([
+        'email' => [
+            'required',
+            Rule::unique('users')->ignore($id),
+        ],
+        'name' => 'required',
+        // REPLICATE THE ADDRESS RULE HERE
+        'address' => ['required', 'string', 'max:255',
+            function ($attribute, $value, $fail) {
+                // Check if the address contains 'Kuala Lumpur' OR 'KL' (case-insensitive)
+                if (stristr($value, 'Kuala Lumpur') === false && stristr($value, 'KL') === false) {
+                    // If it doesn't contain either, fail the validation with a custom message.
+                    $fail('Sorry, service is currently only available for addresses in Kuala Lumpur.');
+                }
+            },
+        ],
+    ]);
 
-        User::where('id', $id)->update([
-            'name' => $user['name'],
-            'email' => $user['email'],
-            'address' => $user['address'],
-        ]);
+    // The rest of the function remains the same
+    User::where('id', $id)->update([
+        'name' => $user['name'],
+        'email' => $user['email'],
+        'address' => $user['address'],
+    ]);
 
-        Session::flash('success', 'Successfully edited the user.');
-        return redirect('/home');
-    }
+    Session::flash('success', 'Successfully edited your profile.');
+    return redirect('/home');
+}
 
     public function updateView()
     {

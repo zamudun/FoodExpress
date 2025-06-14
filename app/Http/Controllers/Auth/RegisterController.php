@@ -44,18 +44,24 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            // 'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'password' => ['required', 
-            'min:6', 
-            'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/', 
-            'confirmed'],
-            'address' => ['required', 'string'],
-        ]);
-    }
+{
+    return Validator::make($data, [
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        'password' => ['required', 'string', 'min:8', 'confirmed'],
+
+        // ADD THE CUSTOM RULE FOR THE ADDRESS FIELD
+        'address' => ['required', 'string', 'max:255',
+            function ($attribute, $value, $fail) {
+                // Check if the address contains 'Kuala Lumpur' OR 'KL' (case-insensitive)
+                if (stristr($value, 'Kuala Lumpur') === false && stristr($value, 'KL') === false) {
+                    // If it doesn't contain either, fail the validation with a custom message.
+                    $fail('Sorry, service is currently only available for addresses in Kuala Lumpur.');
+                }
+            },
+        ],
+    ]);
+}
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

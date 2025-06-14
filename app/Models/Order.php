@@ -30,11 +30,20 @@ class Order extends Model
         'deliveryAddress',
     ];
 
-    public function user() {
-        return $this->belongsTo(User::class); 
+    /**
+     * The food items that belong to the order.
+     * This defines the many-to-many relationship with Food.
+     */
+    public function food()
+    {
+        return $this->belongsToMany(Food::class)->withPivot('quantity');
     }
 
-    public function food() {
-        return $this->belongsToMany(Food::class)->withPivot('quantity'); 
+    /**
+     * Get the user that owns the order.
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

@@ -140,7 +140,7 @@ if (!empty(session('cart'))) {
                 <div class="px-6 pt-3 border-t">
                     <div class="flex justify-end">
                         <button type="button" class="closeOrderModal bg-gray-700 text-gray-100 rounded px-4 py-2 mr-1">Close</Button>
-                        <button type="button" class="openPaymentModal bg-green-600 text-white rounded px-4 py-2">Proceed to Payment</Button>
+                        <a href="{{ url('/payment') }}" class="bg-green-600 text-white rounded px-4 py-2">Proceed to Payment</a>
                     </div>
                 </div>
             </form>

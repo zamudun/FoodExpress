@@ -48,7 +48,7 @@
           <div>
           <select name="type" id="type" class="flex justify-center mt-1 flex rounded-md shadow-sm p-1 border focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-md sm:text-lg border-gray-300">>
             <option value="Western" {{($food['type'] == "Western") ? "selected" : ""}}>Western</option>
-            <option value="Chinese" {{($food['type'] == "Chinese") ? "selected" : ""}}>Chinese</option>
+            <option value="Local Cuisine" {{($food['type'] == "Local Cuisine") ? "selected" : ""}}>Local Cuisine</option>
             <option value="Japanese" {{($food['type'] == "Japanese") ? "selected" : ""}}>Japanese</option>
             
           </select>
