@@ -44,27 +44,32 @@ Admin Panel Features
 Real-time business analytics with graphical representations
 Key performance indicators (daily sales, popular items, customer traffic)
 Notification center for critical alerts (low inventory, staff requests)
+
 1.2 Menu Management
 Multi-level categorization (Appetizers, Mains, Desserts, Beverages)
 Dynamic pricing controls (seasonal pricing, happy hour specials)
 Nutritional information tagging (calories, allergens, dietary flags)
 Bulk import/export functionality for menu updates
+
 1.3 Staff Administration
 Role-based access configuration (Manager, Chef, Waiter, Delivery)
 Shift scheduling with drag-and-drop interface
 Performance metrics tracking (orders handled, efficiency ratings)
 Document management (training materials, policy updates)
 Customer Facing Features
+
 2.1 Digital Menu System
 Interactive menu interface with high-resolution images
 Advanced filtering (vegetarian, gluten-free, spice levels)
 Chef recommendations and combo suggestions
 Real-time availability indicators
+
 2.2 Order Processing
 Customizable order options (extra toppings, cooking preferences)
 Scheduled ordering for future dates/times
 Group ordering functionality	
 Saved favorites and reorder options
+
 2.3 Payment System
 Multiple payment gateways (Stripe, PayPal, FPX)
 Split bill functionality
@@ -77,6 +82,7 @@ Priority tagging system (rush orders, VIP customers)
 Preparation timer with alerts
 Modification request handling
 Completion status updates
+
 3.2 Inventory Integration
 Automatic ingredient deduction
 Waste tracking and reporting
@@ -89,6 +95,7 @@ Hourly/daily/weekly sales trends
 Product performance analysis
 Revenue per available seat hour
 Comparative period analysis
+
 4.2 Customer Insights
 Demographic analysis
 Customer lifetime value tracking
