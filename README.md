@@ -94,10 +94,13 @@ Demographic analysis
 Customer lifetime value tracking
 Feedback sentiment analysis
 
+ERD
+![image](https://github.com/user-attachments/assets/0981ce21-0066-4e34-a3f3-13855ee06f87)
 
 
 
-
+Sequence Diagram
+![image](https://github.com/user-attachments/assets/a64d6c38-c857-41b3-ac26-a31cfa92ae4e)
 
 
 
